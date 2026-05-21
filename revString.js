@@ -1,8 +1,8 @@
-
 let string = "hello";
-let rev = "";
+let rev = ""
 
-for(let i=string.length-1;i>=0;i--){
-    rev+=string[i];
+for (let i=string.length-1; i>=0;i--){
+    rev += string[i]
 }
-console.log(rev)
+console.log(rev);
+console.log(string)
