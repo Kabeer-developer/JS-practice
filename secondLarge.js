@@ -1,18 +1,18 @@
-
-function bubbleSort(arr){
-    let n = arr.length-1;
-    for(let i=0;i<n;i++){
+function bubbleSort(array){
+    let n = array.length-1;
+    for(let i =0;i<n;i++){
         for(let j=0;j<n-i;j++){
-            if(arr[j]>arr[j+1]){
-                let temp = arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
+            if(array[j]>array[j+1]){
+                temp = array[j]
+                array[j] = array[j+1]
+                array[j+1] = temp
             }
         }
     }
-    return arr;
+    return array
 }
 let array = [6,5,4,3,2,1];
-console.log("after sorting",bubbleSort(array));
-let result = [...array];
+let sorted = bubbleSort(array)
+console.log(sorted);
+let result = sorted;
 console.log(result[result.length-2])
