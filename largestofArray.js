@@ -1,9 +1,9 @@
-let arr=[3,4,2,32,56,23,54]
-let max = arr[0];
+let array = [1,2,4,3,7,6,5]
+let max = array[0];
 
-for(let i=1;i<arr.length;i++){
-    if(arr[i]>max){
-        max = arr[i];
+for(let i=0; i<array.length;i++){
+    if(array[i]>max){
+        max = array[i];
     }
 }
-console.log(max);
+console.log(max)
