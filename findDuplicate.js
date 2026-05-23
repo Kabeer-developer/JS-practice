@@ -1,15 +1,16 @@
-function Duplicate(arr){
+function Duplicate(array){
     let seen = new Set();
-    let dup = new Set();
+    let duplicate = new Set();
 
-    for(let item of arr){
+    for(let item of array){
         if(seen.has(item)){
-            dup.add(item);
+            duplicate.add(item)
         } else {
-            seen.add(item);
+            seen.add(item)
         }
     }
-    return [...dup];
+    return [...duplicate]
+    
 }
 
 console.log(Duplicate([1,2,3,4,3,2,4,2,1,5,6]))
