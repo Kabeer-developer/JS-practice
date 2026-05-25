@@ -10,14 +10,12 @@ async function fetchData(){
     try{
         const response = await fetch('https://randomuser.me/api/');
         if(!response.ok){
-            throw new Error("Failed to fetch");
-        } else {
-            const result = await response.json();
-            console.log(result);
+            throw new Error("failed to fetch");
         }
-    }
-    catch(err){
-        console.log(err);
+        const result = await response.json();
+        console.log(result);
+    } catch(e){
+        console.log(e);
     }
 }
 fetchData();
