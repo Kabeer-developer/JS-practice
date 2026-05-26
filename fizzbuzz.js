@@ -1,6 +1,6 @@
 
-function FizzBuzz(){
-    for(i=1;i<=100;i++){
+function FizzBuzz(a,b){
+    for(i=a;i<=b;i++){
         if(i%3==0 && i%5==0){
             console.log("FizzBuzz");
         } else if(i%3==0){
@@ -12,3 +12,5 @@ function FizzBuzz(){
         }
     }
 }
+
+FizzBuzz(1,10);
