@@ -15,7 +15,9 @@ const deepclone = (obj)=> {
 const object = {
     a : 10
 }
-
+const b =object;
+// b.a=300;
+console.log(b.a);
 const clone = deepclone(object);
 clone.a = 100;
 console.log(object.a);
