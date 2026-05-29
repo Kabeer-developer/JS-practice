@@ -1,27 +1,13 @@
-
-let string = "hello";
-let rev = "";
-
-for(let i=string.length-1;i>=0;i--){
-    rev+=string[i];
+function checkPalindrome(str){
+    isPalindrome = true;
+    let n = str.length;
+    for(let i=0;i<=Math.ceil(n/2);i++){
+        if(str[i]!=str[n-1-i]){
+            isPalindrome=false;
+            break;
+        }
+    }
+    return isPalindrome;
 }
-if(string==rev){
-    console.log(`true ${rev}`);
-} else {
-    console.log(`false ${rev}`);
-}
 
-let n = 1234
-let revN = 0;
-
-while(n>0){
-    let rem = n%10;
-    revN = revN*10 + rem;
-    n = Math.floor(n/10);
-}
-console.log(revN)
-if(n==revN){
-    console.log("Number is Palindrome")
-} else {
-    console.log("Not a Palindrome");
-}
+console.log(checkPalindrome("Hello"));

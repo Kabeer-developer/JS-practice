@@ -1,22 +1,21 @@
 const promiseAll = (promises)=> {
     return new Promise((resolve,reject)=> {
-        let results = []
-        let count = 0
-
+        let results =[];
+        let count = 0;
         promises.forEach((p,i) => {
             Promise.resolve(p)
             .then((res)=> {
-                results[i] = res
+                results[i]=res;
                 count++
-                if(count === promises.length) return resolve(results)
+                if(count == promises.length) resolve(results);
             })
-            .catch(reject);
+            .catch((err)=> console.log(err));
         });
     })
 }
 
 const p1 = Promise.resolve(10);
-const p2 = new Promise(res => setTimeout(() => res(20), 1000));
+const p2 = new Promise(res => setTimeout(() => res(20), 2000));
 const p3 = 30; 
 
 promiseAll([p1, p2, p3])
