@@ -10,4 +10,4 @@ let zeros = arr.length-result.length;
 for(let i=0;i<zeros;i++){
     result.push(0)
 }
-console.log(result)
+console.log(result);
