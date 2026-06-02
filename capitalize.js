@@ -1,6 +1,6 @@
 //Capitalize first letter of a string 
 let string = "hello"
-let result = string[0].toUpperCase();
+let result = string.charAt(0).toUpperCase();
 console.log(result)
 
 // Capitalize first letter of each word
