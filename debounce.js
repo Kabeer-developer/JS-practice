@@ -8,10 +8,10 @@ function debounce(fn,delay){
 }
 
 function sayHello(){
-    console.log("hello");
+    console.log("Hello Kabeer");
 }
 
-const debounceFunc = debounce(sayHello,2000);
+let debounceFunc = debounce(sayHello,2000);
 debounceFunc();
 debounceFunc();
 debounceFunc();
