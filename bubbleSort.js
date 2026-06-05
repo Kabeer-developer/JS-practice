@@ -1,4 +1,3 @@
-
 function bubbleSort(arr){
     let n = arr.length-1;
     for(let i=0;i<n;i++){
@@ -13,5 +12,9 @@ function bubbleSort(arr){
     return arr;
 }
 
-const array = [5,4,3,2,1];
-console.log(bubbleSort(array));
+console.log(bubbleSort([4,5,3,2,6,7]));
+
+// second largest
+let sLargest = bubbleSort([4,5,3,2,6,7]);
+let sLen = sLargest.length;
+console.log(sLargest[sLen-2]);
