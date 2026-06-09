@@ -1,9 +1,10 @@
 function curry(a,b){
     if(b!==undefined){
         return a+b;
-    }  
-       return function subcurry(b){
-        return a+b
+    } else {
+        return function(b){
+            return a+b;
+        }
     }
 }
 
