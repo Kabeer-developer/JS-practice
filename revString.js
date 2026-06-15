@@ -1,7 +1,9 @@
-let string = "kabeer";
-let result ="";
-
-for(let i=string.length-1;i>=0;i--){
-    result += string.charAt(i);
+function revString(str){
+    let rev="";
+    for(let i=str.length-1;i>=0;i--){
+        rev += str[i];
+    }
+    return rev;
 }
-console.log(result);
+
+console.log(revString("Kabeer"));
