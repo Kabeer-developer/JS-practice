@@ -1,6 +1,9 @@
-let n = 7;
-let num=1;
-for(let i = n;i>0;i-- ){
-    num *= i;
+function factorial(n){
+    let fact =1;
+    for(let i=1;i<=n;i++){
+        fact*=i;
+    }
+    return fact;
 }
-console.log(num);
+console.log(factorial(5));
+console.log(factorial(0));
