@@ -1,17 +1,17 @@
 const promiseAll = (promises)=> {
-    return new Promise((resolve,reject)=> {
-        let results =[];
-        let count = 0;
-        promises.forEach((p,i) => {
-            Promise.resolve(p)
-            .then((res)=> {
-                results[i]=res;
-                count++
-                if(count == promises.length) resolve(results);
-            })
-            .catch((err)=> console.log(err));
-        });
-    })
+   return new Promise((resolve,reject)=> {
+    let result = []
+    let count =0
+    promises.forEach((p,i) => {
+        Promise.resolve(p)
+        .then((res)=> {
+            result[i] = res
+            count++
+            if(promises.length == count) return resolve(result);
+        })
+        .catch((err)=> console.log(err));
+    });
+   })
 }
 
 const p1 = Promise.resolve(10);
