@@ -1,18 +1,15 @@
 //Capitalize first letter of a string 
 let name = "kabeer"
-let op = name[0].toUpperCase()+name.slice(1);
-console.log(op);
+let result = name.charAt(0).toUpperCase()+name.slice(1);
+console.log(result);
 
 // Capitalize first letter of each word
 
-let sentence = "hello my name is kabeer";
-let words = sentence.split(" ");
-let op="";
-
-
-
-for(let word of words){
-    let capitalize = word.charAt(0).toUpperCase()+word.slice(1);
-    op += capitalize+" ";
+let string = "hello my name is kabeer";
+let newString = string.split(" ");
+let result1="";
+for(let str of newString){
+    let temp = str.charAt(0).toUpperCase()+str.slice(1);
+    result1 += temp+" ";
 }
-console.log(op)
+console.log(result1.trim());
