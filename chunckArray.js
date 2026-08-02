@@ -1,11 +1,13 @@
-let array = [1,2,3,4,5,6,7,8];
+let arr = [1,2,3,4,5,6,7,8,9];
+let size = 2;
 
-function chunckArray(arr,size){
-    let result =[]
-    for(let i=0;i<arr.length;i+=size){
-        result.push(arr.slice(i,i+size));
+let result = [];
+for(let i=0;i<=arr.length-size;i+=size){
+    let temp = [];
+    for(let j=i;j<i+size;j++){
+        temp.push(arr[j]);
     }
-    return result;
+    result.push(temp);
+    console.log(temp);
 }
-
-console.log(chunckArray(array,3));
+console.log(result);
