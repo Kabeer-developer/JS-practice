@@ -1,12 +1,11 @@
-function wait(){
+function Wait(){
     return new Promise((resolve,reject)=> {
-        setTimeout(() => {
-            resolve("hello kabeer");
-        }, 2000);
+        resolve("Hello Kabeer");
     })
 }
-async function run() {
-    const result = await wait();
+
+async function run(){
+    const result = await Wait();
     console.log(result);
 }
 run();
