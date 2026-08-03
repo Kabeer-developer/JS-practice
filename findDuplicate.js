@@ -1,15 +1,19 @@
-function Duplicate(array){
-    let seen = new Set();
-    let dupliate = new Set();
+// find duplicate or remove duplicate
 
-    for(let a of array){
+function removeDup(arr){
+    let seen = new Set();// [...duplicate] to print duplicate
+    let duplicate = new Set();
+
+    for(let a of arr){
         if(seen.has(a)){
-            dupliate.add(a);
+            duplicate.add(a);
         } else {
             seen.add(a);
         }
     }
-    return[...dupliate];
+    return [...duplicate];
 }
-
-console.log(Duplicate([1,2,3,4,3,2,4,2,1,5,6]))
+console.log(removeDup([1,2,3,4,5,4,3,2]));
+let array = [1,2,3,4,5,4,3,2];
+let result = new Set(array);
+console.log([...result]);
