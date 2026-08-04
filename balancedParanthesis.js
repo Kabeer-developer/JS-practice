@@ -1,19 +1,19 @@
 function balanceParan(str){
-    let count =0;
     let isBalanced = true;
+    let count =0;
 
-    for(let ch of str){
-        if(ch=="("){
+    for(let i=0;i<str.length;i++){
+        if(str.charAt(i)=='('){
             count++;
-        } else if(ch==")"){
+        }
+        if(str.charAt(i)==')'){
             count--;
         }
     }
-
-    if(count !== 0){
-        isBalanced=false;
-    }
-    return isBalanced;
+      if(count !=0){
+            isBalanced=false;
+        }
+        return isBalanced;
 }
 
 console.log(balanceParan("(()))("));
